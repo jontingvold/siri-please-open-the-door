@@ -22,7 +22,7 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
   end
 
   listen_for /open the door/i do
-    say "Door opened.", spoken @messages.sample
+    say "Door opened.", spoken: @messages.sample
     
     # sleep 1.0    # Wait one secund before opening the door
     contents  = open('http://door.kulia.no') {}
@@ -32,7 +32,7 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
   end
   
   listen_for /open door/i do
-    say "Door opened.", spoken @messages.sample
+    say "Door opened.", spoken: @messages.sample
     
     contents  = open('http://door.kulia.no') {}
     puts "Door opened!"
