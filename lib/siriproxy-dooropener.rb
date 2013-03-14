@@ -26,7 +26,7 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
   
-  listen_for /open (*.) door/i do
+  listen_for /open door/i do
     say "Door opened."
     
     contents  = open('http://door.kulia.no') {}
