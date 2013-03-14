@@ -13,11 +13,16 @@ require 'open-uri'
 
 class SiriProxy::Plugin::Example < SiriProxy::Plugin
   def initialize(config)
-    #if you have custom configuration options, process them here!
+    
+    # Answers to questions like "Can you please open the door", "Siri, open the door, please"
+    
+    @messages = [
+        "As you wish sir",
+        "Your welcome"]
   end
 
   listen_for /open the door/i do
-    say "Door opened." #say something to the user!
+    say "Door opened.", spoken @messages.sample
     
     # sleep 1.0    # Wait one secund before opening the door
     contents  = open('http://door.kulia.no') {}
@@ -27,7 +32,7 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
   end
   
   listen_for /open door/i do
-    say "Door opened."
+    say "Door opened.", spoken @messages.sample
     
     contents  = open('http://door.kulia.no') {}
     puts "Door opened!"
