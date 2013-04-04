@@ -18,10 +18,11 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
     
     @messages = [
         "As you wish sir",
-        "Your welcome"]
+        "Your welcome",
+        "Welcome to Geir"]
   end
-
-  listen_for /open the door/i do
+  
+  def open_the_door()
     say "Door opened.", spoken: @messages.sample
     
     # sleep 1.0    # Wait one secund before opening the door
@@ -30,13 +31,12 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
     
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
+
+  listen_for /open the door/i do
+    open_the_door
+  end
   
   listen_for /open door/i do
-    say "Door opened.", spoken: @messages.sample
-    
-    contents  = open('http://door.kulia.no') {}
-    puts "Door opened!"
-    
-    request_completed
+    open_the_door
   end
 end
