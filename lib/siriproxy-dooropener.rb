@@ -15,15 +15,19 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
   def initialize(config)
     
     # Answers to questions like "Can you please open the door", "Siri, open the door, please"
-    
-    @messages = [
+  end
+  
+  def generate_response()
+    messages = [
         "As you wish sir",
         "Your welcome",
         "Welcome to Geir"]
+        
+    return messages.sample
   end
   
-  def open_the_door()
-    say "Door opened.", spoken: @messages.sample
+  def open_the_door(text_message, voice_message)
+    say text_message, spoken: voice_message
     
     # sleep 1.0    # Wait one secund before opening the door
     contents  = open('http://door.kulia.no') {}
@@ -33,10 +37,10 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
   end
 
   listen_for /open the door/i do
-    open_the_door
+    open_the_door("Door opened.", generate_message)
   end
   
   listen_for /open door/i do
-    open_the_door
+    open_the_door("Door opened.", generate_message)
   end
 end
