@@ -14,10 +14,22 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
   end
   
   def generate_response()
-    messages = [
+    hour = Time.new.hour
+    
+    if hour.between(18, 21)
+      messages = [
+          "Have a pleasant evening sir",
+          "As you wish sir",
+    elsif hour.between(3, 6)
+      messages = [
+          "Do you know what time it is",
+          "As you wish sir",
+    else
+      messages = [
         "As you wish sir",
         "Your welcome",
         "Welcome to Geir"]
+    end
         
     return messages.sample
   end
