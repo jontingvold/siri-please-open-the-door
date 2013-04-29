@@ -37,6 +37,14 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
   end
   
   listen_for /open door/i do
+    response = ask "What is the magic word?" #ask the user for something
+
+        if(response =~ /please/i) #process their response
+          open_the_door("Door opened.", "Your welcome")
+        else 
+          request_completed
+        end
+  end
     open_the_door("Door opened.", generate_message)
   end
 end
