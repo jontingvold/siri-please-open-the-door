@@ -45,6 +45,12 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
           request_completed
         end
   end
+  
+  listen_for /unlock the door/i do
+    open_the_door("Door opened.", generate_message)
+  end
+  
+  listen_for /open up the door/i do
     open_the_door("Door opened.", generate_message)
   end
 end
