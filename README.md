@@ -9,6 +9,8 @@ Setting up the hack to enable Siri to follow custom commands is not the easiest 
 
 ### Demo
 
+[![Siri Door Opener – A hack to enable iPhone Siri to open an apartment door remotely](https://video-to-markdown.netlify.com/.netlify/functions/image?url=https%3A%2F%2Fyoutu.be%2F6k1jcBiWRdg)](https://youtu.be/6k1jcBiWRdg "Siri Door Opener – A hack to enable iPhone Siri to open an apartment door remotely")
+
 ![Example](example_image.png)
 
 <video width="320" height="240" controls>
