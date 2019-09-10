@@ -1,4 +1,4 @@
-Siri Door Opener – A hack to enable iPhone Siri to open an apartment door remotely
+Siri Door Opener – A hack to enable iPhone Siri to open an apartment door remotely
 ====================
 
 This is a small personal project from 2013.
@@ -40,3 +40,13 @@ Reload SiriProxy
 Run SiriProxy
 
 	siriproxy server
+
+Questions?
+----------
+
+Feel free to [send me an email](http://www.jontingvold.no/) if you have questions about the project.
+
+License
+-------
+
+[MIT](LICENSE)
