@@ -9,11 +9,11 @@ Hacking Siri to follow custom commands is not the easiest thing in the world. Fi
 
 ### Demo
 
-Yes, it does in fact open the door
+[![Siri Door Opener – A hack to enable iPhone Siri to open an apartment door remotely](example-youtube-thumbnail.png)](https://youtu.be/6k1jcBiWRdg "Siri Door Opener – A hack to enable iPhone Siri to open an apartment door remotely")
 
-[![Siri Door Opener – A hack to enable iPhone Siri to open an apartment door remotely](https://video-to-markdown.netlify.com/.netlify/functions/image?url=https%3A%2F%2Fyoutu.be%2F6k1jcBiWRdg)](https://youtu.be/6k1jcBiWRdg "Siri Door Opener – A hack to enable iPhone Siri to open an apartment door remotely")
+[Demo on Youtube](https://youtu.be/6k1jcBiWRdg "Siri Door Opener – A hack to enable iPhone Siri to open an apartment door remotely")
 
-![Example](example_image.png)
+*Yes, it does in fact open the door*
 
 ### Installation
 
